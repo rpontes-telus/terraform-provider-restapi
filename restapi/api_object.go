@@ -141,7 +141,7 @@ func NewAPIObject(iClient *APIClient, opts *apiObjectOpts) (*APIObject, error) {
 
 		/* Opportunistically set the object's ID if it is provided in the data.
 		   If it is not set, we will get it later in synchronize_state */
-		if obj.id == "" {
+		/*if obj.id == "" {
 			var tmp string
 			tmp, err := GetStringAtKey(obj.data, obj.idAttribute, obj.debug)
 			if err == nil {
@@ -154,7 +154,7 @@ func NewAPIObject(iClient *APIClient, opts *apiObjectOpts) (*APIObject, error) {
 				   later, error out to be safe */
 				return &obj, fmt.Errorf("provided data does not have %s attribute for the object's id and the client is not configured to read the object from a POST response; without an id, the object cannot be managed", obj.idAttribute)
 			}
-		}
+		}*/
 	}
 
 	if opts.updateData != "" {
